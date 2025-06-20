@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Colour_Palette_Sci_Fi_Emission
-    second: {fileID: 8443986690989818273, guid: d3a527b05ad621a47849900f5849db58, type: 3}
+    second: {fileID: -8122266311163210697, guid: 2506c32f90ed869409734d062d07c67e, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

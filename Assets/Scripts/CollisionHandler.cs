@@ -44,11 +44,6 @@ public class CollisionHandler : MonoBehaviour
             isCollidable = !isCollidable;
             Debug.Log("Collision toggled: " + (isCollidable ? "Enabled" : "Disabled"));
         }
-        else if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            isControllable = !isControllable;
-            Debug.Log("Control toggled: " + (isControllable ? "Enabled" : "Disabled"));
-        }
     }
     private void OnCollisionEnter(Collision collision)
     {
