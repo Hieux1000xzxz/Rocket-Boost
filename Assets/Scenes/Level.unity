@@ -578,7 +578,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 423888399690913345, guid: 3b225039f81f9634a8b2457f0b20fd1d, type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4789333178081724212, guid: 3b225039f81f9634a8b2457f0b20fd1d, type: 3}
       propertyPath: m_LocalScale.x
@@ -865,6 +865,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5235f3354d55b3047977c1ad1328751a, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4764ba75f3024d44f8f5ca47f3fb0854, type: 2}
     - target: {fileID: 919132149155446097, guid: 5235f3354d55b3047977c1ad1328751a, type: 3}
       propertyPath: m_Name
       value: Moving Pad (2)
@@ -1006,6 +1010,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5235f3354d55b3047977c1ad1328751a, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4764ba75f3024d44f8f5ca47f3fb0854, type: 2}
     - target: {fileID: 919132149155446097, guid: 5235f3354d55b3047977c1ad1328751a, type: 3}
       propertyPath: m_Name
       value: Moving Pad (1)
@@ -1077,6 +1085,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8717178684730665975, guid: 0cd312f26fd0bfa408a5cf73e4cfa92c, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4764ba75f3024d44f8f5ca47f3fb0854, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2223,6 +2235,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 768726347}
     m_Modifications:
+    - target: {fileID: 7651365141529600946, guid: 0cb83d0526ae20f44a0f2296424132a7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ad4e47271285f4498c0af5fdac4e638, type: 2}
+    - target: {fileID: 7651365141529600946, guid: 0cb83d0526ae20f44a0f2296424132a7, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e7950d248d6b9844842b7912141baea, type: 2}
     - target: {fileID: 8155984284327477863, guid: 0cb83d0526ae20f44a0f2296424132a7, type: 3}
       propertyPath: m_Name
       value: Crate_02_2_Glow
@@ -2422,6 +2442,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5235f3354d55b3047977c1ad1328751a, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4764ba75f3024d44f8f5ca47f3fb0854, type: 2}
     - target: {fileID: 919132149155446097, guid: 5235f3354d55b3047977c1ad1328751a, type: 3}
       propertyPath: m_Name
       value: Moving Pad
@@ -3690,6 +3714,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2171582912418307782, guid: c029b7bf93f63db45aa4e921d6a37444, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ad4e47271285f4498c0af5fdac4e638, type: 2}
+    - target: {fileID: 2171582912418307782, guid: c029b7bf93f63db45aa4e921d6a37444, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4764ba75f3024d44f8f5ca47f3fb0854, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

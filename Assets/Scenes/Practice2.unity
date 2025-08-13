@@ -233,6 +233,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2171582912418307782, guid: c029b7bf93f63db45aa4e921d6a37444, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b20396b4a8fc9ea4598cbb3f8d4ff60d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -673,6 +677,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2171582912418307782, guid: c029b7bf93f63db45aa4e921d6a37444, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b20396b4a8fc9ea4598cbb3f8d4ff60d, type: 2}
+    - target: {fileID: 2171582912418307782, guid: c029b7bf93f63db45aa4e921d6a37444, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f084d4f4c5c90874d9e97b3a252d1482, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -752,6 +764,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 185676300432291810, guid: dadbebe0f3a14ca4e9d1c0f25cba5b82, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 2535143217296591928}
+    - target: {fileID: 185676300432291810, guid: dadbebe0f3a14ca4e9d1c0f25cba5b82, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2535143217296591927}
     - target: {fileID: 185676300432291810, guid: dadbebe0f3a14ca4e9d1c0f25cba5b82, type: 3}
       propertyPath: thrustStrength
       value: 1500
@@ -885,6 +905,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dadbebe0f3a14ca4e9d1c0f25cba5b82, type: 3}
+--- !u!82 &2535143217296591927 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2141639912636956570, guid: dadbebe0f3a14ca4e9d1c0f25cba5b82, type: 3}
+  m_PrefabInstance: {fileID: 2535143217296591926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2535143217296591928 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4927141736203485791, guid: dadbebe0f3a14ca4e9d1c0f25cba5b82, type: 3}
+  m_PrefabInstance: {fileID: 2535143217296591926}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

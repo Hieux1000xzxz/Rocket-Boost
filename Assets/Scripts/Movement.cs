@@ -10,8 +10,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private ParticleSystem mainEngineParticles;
     [SerializeField] private ParticleSystem leftThrusterParticles;
     [SerializeField] private ParticleSystem rightThrusterParticles;
-    private Rigidbody rb;
-    private AudioSource audioSource;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private AudioSource audioSource;
     private void OnEnable()
     {
         thrust.Enable();
@@ -19,8 +19,6 @@ public class Movement : MonoBehaviour
     }
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
     }
     private void FixedUpdate()
     {

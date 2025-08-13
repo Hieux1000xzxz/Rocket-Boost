@@ -144,6 +144,8 @@ MonoBehaviour:
   mainEngineParticles: {fileID: 9118204787394184197}
   leftThrusterParticles: {fileID: 6340338351774252227}
   rightThrusterParticles: {fileID: 4057402079493467909}
+  rb: {fileID: 4927141736203485791}
+  audioSource: {fileID: 2141639912636956570}
 --- !u!54 &4927141736203485791
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -169,7 +171,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 56
   m_CollisionDetection: 0
 --- !u!65 &5753894472431208503
 BoxCollider:
@@ -306,6 +308,8 @@ MonoBehaviour:
   crashSound: {fileID: 8300000, guid: 1704ef9a5c82f804498501e5ef28a3e2, type: 3}
   successParticles: {fileID: 6167014587320899798}
   crashParticles: {fileID: 8831203562204922825}
+  audioSource: {fileID: 2141639912636956570}
+  movement: {fileID: 185676300432291810}
 --- !u!1 &6812683632315080514
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +627,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8833397428035563184}
     m_Modifications:
+    - target: {fileID: 1239857956724173737, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e7950d248d6b9844842b7912141baea, type: 2}
     - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -667,6 +675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rick's Weird Space Pod
       objectReference: {fileID: 0}
+    - target: {fileID: 9113961483072506109, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e7950d248d6b9844842b7912141baea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

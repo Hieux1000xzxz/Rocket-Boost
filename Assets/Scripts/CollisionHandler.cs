@@ -1,6 +1,3 @@
-using NUnit.Framework.Constraints;
-using Unity.Cinemachine;
-using Unity.Jobs;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -12,24 +9,18 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] private AudioClip crashSound;
     [SerializeField] private ParticleSystem successParticles;
     [SerializeField] private ParticleSystem crashParticles;
+    [SerializeField] private AudioSource audioSource; 
+    [SerializeField] private Movement movement;
 
-    private AudioSource audioSource;
     private bool isControllable = true;
     private bool isCollidable = true;
-    public void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            Debug.LogError("AudioSource component is missing on the CollisionHandler GameObject.");
-        }
-    }
 
     private void Update()
     {
-        ResponseDebugKey();
+        HandleDebugKeys();
     }
-    private void ResponseDebugKey()
+
+    private void HandleDebugKeys()
     {
         if (Keyboard.current.lKey.wasPressedThisFrame)
         {
@@ -42,12 +33,14 @@ public class CollisionHandler : MonoBehaviour
         else if (Keyboard.current.cKey.wasPressedThisFrame)
         {
             isCollidable = !isCollidable;
-            Debug.Log("Collision toggled: " + (isCollidable ? "Enabled" : "Disabled"));
+            Debug.Log($"Collision toggled: {(isCollidable ? "Enabled" : "Disabled")}");
         }
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (!isControllable || !isCollidable) return;
+
         switch (collision.gameObject.tag)
         {
             case "Friendly":
@@ -64,39 +57,38 @@ public class CollisionHandler : MonoBehaviour
                 break;
         }
     }
+
     private void StartSuccessSequence()
     {
         isControllable = false;
         audioSource.Stop();
         audioSource.PlayOneShot(successSound);
         successParticles.Play();
-        GetComponent<Movement>().enabled = false;
-        Invoke("LoadNextScene", levelLoadDelay);
+        movement.enabled = false;
+        Invoke(nameof(LoadNextScene), levelLoadDelay);
         Debug.Log("Success sequence started!");
     }
+
     private void StartCrashSequence()
     {
         isControllable = false;
         audioSource.Stop();
         audioSource.PlayOneShot(crashSound);
         crashParticles.Play();
-        GetComponent<Movement>().enabled = false;
-        Invoke("ReloadScene", levelLoadDelay);
+        movement.enabled = false;
+        Invoke(nameof(ReloadScene), levelLoadDelay);
         Debug.Log("Crash sequence started!");
-        
     }
+
     private void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int nextSceneCount = currentSceneIndex + 1;
-        if (nextSceneCount == SceneManager.sceneCountInBuildSettings) {
-            nextSceneCount = 0;
-        }
-        SceneManager.LoadScene(nextSceneCount);
+        int nextSceneIndex = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
+        SceneManager.LoadScene(nextSceneIndex);
     }
+
     private void ReloadScene()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
